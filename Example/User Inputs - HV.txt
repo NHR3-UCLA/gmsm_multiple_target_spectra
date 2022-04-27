@@ -1,0 +1,19 @@
+InputFolder_ResponseSpectrum:		Inputs
+SaveFolderPath: 			Outputs
+OutputImagesSaveFileName: 		Images
+ListOfRecordsSaveFileName: 		list of records
+InputSpectrumFileName_Hor: 		InputSpectra_Horizontal
+InputSpectrumFileName_Ver: 		InputSpectra_Vertical
+my_device_ID:				0 		#This is the device that the code will run on. For best performance, it should be set on a GPU device. Please refer to the "print(devices)" line in the above cell for a list of the devices that are available on your computer  
+nGM: 					5             #Number of records to be selected
+isScaled: 				1              #If 1 records are scaled, if 0 raw ground motions will be selected
+MaxNoEventsFromOneEvent: 		5 #Maximum number of records that could come from a single event
+Database: 				NGA-West2
+SaveFile: 				Outputs
+VerMismatchPenalty: 			10 #Each horizontal record would be penalized by this factor if its associated vertical spectrum does not match the input target vertical response spectrum
+weight_Mean:     			1.0  		#Weights of mean and standard deviation of the target response spectrum in final record selection
+weight_std:     			2.0  		#Weights of mean and standard deviation of the target response spectrum in final record selection
+nLoop: 					2          #Number of passes to refine the preliminary record set
+scales_MAX: 				5  		#Maximum scale to be used in record selection
+scales_MIN: 				0.1  		#Minimum scale to be used in record selection
+scales_No: 				50  		#50 scale factors from 0.1 to maxScal
